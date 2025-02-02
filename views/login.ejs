@@ -1,0 +1,15 @@
+<%- include("./includes/_header.ejs") %>
+
+<form action="/login" method="POST">
+    <h1>로그인</h1>
+
+    <label for="id">아이디</label>
+    <input type="text" name="id">
+
+    <label for="password">비밀번호</label>
+    <input type="password" name="password">
+
+    <input type="submit" value="로그인">
+</form>
+
+<%- include("./includes/_footer.ejs") %>

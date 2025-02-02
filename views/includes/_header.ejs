@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈페이지</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+</head>
+<body>
+
+    <header>
+        <div id="hd1">
+            <div id="container">
+                <% if (isAuthenticated) { %>
+                    <div id="logout"><a href="/logout">로그아웃</a></div>
+                <% } else { %>
+                    <div id="register"><a href="/register">회원가입</a></div>
+                    <div id="login"><a href="/login">로그인</a></div>
+                <% } %>
+            </div>
+        </div>
+        <div id="hd2">
+            <div id="container">
+                <div id="logo">
+                    <a href="/">로고</a>
+                </div>
+                <div id="category">
+                    <ul>
+                        <li>카테고리1</li>
+                        <li>카테고리2</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div id="container">   
