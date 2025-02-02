@@ -1,5 +1,7 @@
+/* 헤더 */
+/* 헤더1 : 로그인, 로그아웃, 회원가입 */
 #hd1{
-    background: gray;
+    background: #455;
     height: 50px;
     text-align: right;
     line-height:50px;
@@ -8,10 +10,30 @@
     width: 100px;
     height: 50px;
     display:inline-block;
-    text-align: center;
+    text-align: right;
 }
-
+/* 헤더2 : 로고, 카테고리 */
 #hd2{
-    background: yellow;
+    background: #fe2;
     height:100px;
 }
+#hd2 #logo{
+    width:150px;
+    height:100px;
+    float:left;
+}
+#hd2 #category{
+    width:40vw;
+    height:50px;
+    float:right;
+    margin-top:50px;
+    text-align: right;
+    line-height: 50px;
+}
+#hd2 #category li{
+    width:50%;
+    height:50px;
+    float:left;
+}
+
+

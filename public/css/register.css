@@ -1,0 +1,32 @@
+/* 회원가입 페이지 및 로그인 페이지 */
+#register-form, #login-form{
+    width:600px;
+    padding: 100px 50px;
+}
+#register-form>h1, #login-form>h1{
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+}
+#register-form>div, #login-form>div{
+    width:500px;
+    height:50px;
+    line-height:50px;
+}
+#register-form label, #login-form label{
+    display: inline-block;
+    width:150px;
+    height:50px;
+}
+#register-form input, #login-form input{
+    width:340px;
+    height:30px;
+}
+#register-form #submit, #login-form #submit{
+    width:500px;
+    height:70px;
+}
+#register-form #submit input, #login-form #submit input{
+    width:500px;
+    height:40px;
+}

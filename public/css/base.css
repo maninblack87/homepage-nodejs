@@ -6,11 +6,18 @@
 }
 a{
     text-decoration: none;
+    color:#233;
+    font-weight: 600;
+}
+a:hover{
+    color:#455;
+}
+input{
+    cursor:pointer;
 }
 
 /* 컨테이너 */
 #container{
-    width:1000px;
+    width:80%;
     margin: 0 auto;
-    border: 1px solid black;
 }

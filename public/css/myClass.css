@@ -1,0 +1,14 @@
+/* 앵커 태그 - 흰색 */
+.white-anchor, .white-anchor a{
+    color: white;
+}
+.white-anchor:hover, .white-anchor a:hover{
+    color: #ddd;
+}
+
+/* 해당 요소 내 (모든) 컨텐츠 중앙정렬 클래스 */
+.content-centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
