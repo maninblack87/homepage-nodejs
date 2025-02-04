@@ -1,0 +1,23 @@
+/* 컨테이너 */
+#container{
+    width:80%;
+    margin: 0 auto;
+}
+
+/* 컨텐츠 */
+.content{
+    padding-top:100px;
+    padding-bottom:100px;
+}
+.content h1{
+    margin-bottom:50px;
+    text-align: center;
+}
+
+/* 버튼 - 노란색(#fd4) */
+.button-yellow{
+    background: #fd4;
+    border:1px solid gray;
+    font-weight: 600;
+    font-size: 16px;
+}

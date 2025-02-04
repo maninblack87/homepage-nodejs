@@ -13,7 +13,7 @@ const getRegister = (req, res) => {
 // 회원 가입 처리 함수
 const registerUser = asyncHandler(async(req, res)=> {
     try {
-        const {id, password1, password2} = req.body;
+        const {id, password1, password2, telephone, email} = req.body;
         
         // id가 중복되는지 확인
         const existingUser = await User.findOne({ id });
@@ -21,11 +21,11 @@ const registerUser = asyncHandler(async(req, res)=> {
             return res.status(400).json({ message: "이미 존재하는 아이디입니다." });
         }
 
-        // 비밀번호가 제대로 입력되었는지 확인
+        // 비밀번호가 제대로 입력되었는지 확인 후,
+        // 비밀번호 해싱 후 사용자 정보를 DB에 등록한다
         if (password1 === password2) {
-
             const hashedPassword = await bcrypt.hash(password1, 10); // 비밀번호 해싱
-            const user = await User.create({id, password: hashedPassword}); // mongoDB에서 Homepage 데이터 베이스의 User테이블에 회원 등록
+            const user = await User.create({id, password: hashedPassword, telephone, email});
             res.redirect("/");
         }
     } catch (error) {
@@ -58,6 +58,12 @@ const loginUser = asyncHandler(async(req, res)=> {
 
     const token = jwt.sign({id: user._id}, jwtSecret);
     res.cookie("token", token, {httpOnly: true});
+
+    // 관리자 로그인 처리
+    if (id === "admin") {
+        return res.redirect("/admin");  // 관리자 페이지로 리디렉션
+    }
+
     res.redirect("/");
 });
 

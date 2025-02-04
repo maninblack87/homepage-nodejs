@@ -9,14 +9,14 @@ const getReservation = (req, res) => {
 // 예약 처리 함수
 const reservationPackage = asyncHandler(async(req, res)=>{
     try{
-        const { package, telephone } = req.body;
+        const { package, dayNumber } = req.body;
         const customer = res.locals.user.id;
         
         if (!res.locals.user || !res.locals.user.id) {
             return res.status(401).json({ message: "로그인이 필요합니다." });
         }
 
-        const reservation = await Reservation.create({customer, telephone, package});
+        const reservation = await Reservation.create({customer, package, dayNumber});
         res.redirect("/");
 
     }catch(error){

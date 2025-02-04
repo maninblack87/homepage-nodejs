@@ -1,0 +1,27 @@
+<%- include("./includes/_header.ejs") %>
+
+<div id="admin-panel">
+    <h1>모든 예약 목록</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>신청일</th>
+                <th>패키지</th>
+                <th>숙박일</th>
+                <th>승인상태</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% reservations.forEach(reservation => { %>
+                <tr>
+                    <td><%= reservation.createdAt.toLocaleDateString() %></td> <!-- 예약 날짜 -->
+                    <td><%= reservation.package %></td>
+                    <td><%= reservation.dayNumber %>박</td>
+                    <td><%= reservation.isAccepted ? "승인됨" : "대기중" %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+
+<%- include("./includes/_footer.ejs") %>

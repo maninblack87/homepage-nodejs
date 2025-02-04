@@ -27,7 +27,7 @@ app.use(authenticationMidware);
 
 // 라우트 미들웨어 사용
 app.use("/", require("./routes/userRoutes"));              
-app.use("/", require("./routes/reservationRoutes"));    
+app.use("/", require("./routes/reservationRoutes"));   
 
 // 기본 라우트 추가 
 app.get("/", asyncHandler(async(req, res) => {
