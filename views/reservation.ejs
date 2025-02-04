@@ -1,0 +1,32 @@
+<%- include("./includes/_header.ejs") %>
+
+<div id="container">
+
+    <form action="/reservation" method="POST" id="reservation-form">
+
+        <h1>예약</h1>
+
+        <ul>
+            <li id="package">
+                <label for="package">패키지명</label>
+                <select name="package" id="package" required>
+                    <option value="standard">스탠다드 패키지</option>
+                    <option value="breakfast">조식 패키지</option>
+                    <option value="dinner">디너 패키지</option>
+                </select>
+            </li>
+            <li id="telephone">
+                <label for="telephone">전화번호</label>
+                <input type="text" name="telephone">
+            </li>
+        </ul>
+
+        <div id="submit" class="content-centered">
+            <input type="submit" value="예약신청">
+        </div>
+
+    </form>
+    
+</div>
+
+<%- include("./includes/_footer.ejs") %>

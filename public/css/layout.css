@@ -6,15 +6,21 @@
     text-align: right;
     line-height:50px;
 }
-#hd1 #register, #hd1 #login{
+#hd1 #register, #hd1 #login, #hd1 #logout{
     width: 100px;
+    height: 50px;
+    display:inline-block;
+    text-align: right;
+}
+#hd1 #welcome{
+    width:300px;
     height: 50px;
     display:inline-block;
     text-align: right;
 }
 /* 헤더2 : 로고, 카테고리 */
 #hd2{
-    background: #fe2;
+    background: #fd4;
     height:100px;
 }
 #hd2 #logo{
@@ -23,17 +29,35 @@
     float:left;
 }
 #hd2 #category{
-    width:40vw;
+    width:20vw;
     height:50px;
+    padding-top:10px;
     float:right;
     margin-top:50px;
     text-align: right;
-    line-height: 50px;
 }
 #hd2 #category li{
     width:50%;
-    height:50px;
+    height:40px;
     float:left;
 }
 
 
+/* 풋터 */
+/* 풋터1 : 로고 */
+footer{
+    width:100%;
+    height:30vh;
+    background: #455;
+}
+footer #logo{
+    float:left;
+    width:35vw;
+    height:30vh;
+}
+footer #privacy-policy ul{
+    padding:20px;
+}
+footer #privacy-policy ul li{
+    display: inline-block;
+}

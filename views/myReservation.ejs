@@ -1,0 +1,36 @@
+<%- include("./includes/_header.ejs") %>
+
+<div id="container">
+
+    <div id="my-reservation">
+
+        <h1>내 예약현황</h1>
+
+        <% if (reservations.length > 0) { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>패키지</th>
+                        <th>전화번호</th>
+                        <th>승인상태</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% reservations.forEach(reservation => { %>
+                        <tr>
+                            <td><%= reservation.package %></td>
+                            <td><%= reservation.telephone %></td>
+                            <td><%= reservation.isAccepted ? "승인됨" : "대기중" %></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p>예약 내역이 없습니다.</p>
+        <% } %>
+        
+    </div>
+
+</div>
+
+<%- include("./includes/_footer.ejs") %>

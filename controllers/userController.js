@@ -11,18 +11,24 @@ const getRegister = (req, res) => {
 };
 
 // 회원 가입 처리 함수
-const registerUser = asyncHandler(async(req, res)=>{
-    try{
+const registerUser = asyncHandler(async(req, res)=> {
+    try {
         const {id, password1, password2} = req.body;
-
-        // 비밀번호가 제대로 입력되었는지 확인
-        if (password1 === password2){
-            const hashedPassword = await bcrypt.hash(password1, 10);            // 비밀번호 해싱
-            const user = await User.create({id, password: hashedPassword});     // mongoDB에서 Homepage 데이터 베이스의 User테이블에 회원 등록
-            res.status(201).json({ message: "Register Successful", user });
+        
+        // id가 중복되는지 확인
+        const existingUser = await User.findOne({ id });
+        if (existingUser) {
+            return res.status(400).json({ message: "이미 존재하는 아이디입니다." });
         }
 
-    } catch(error) {
+        // 비밀번호가 제대로 입력되었는지 확인
+        if (password1 === password2) {
+
+            const hashedPassword = await bcrypt.hash(password1, 10); // 비밀번호 해싱
+            const user = await User.create({id, password: hashedPassword}); // mongoDB에서 Homepage 데이터 베이스의 User테이블에 회원 등록
+            res.redirect("/");
+        }
+    } catch (error) {
         console.error("회원가입 중 오류 발생:", error);
         res.status(500).json({
             message: "회원가입 중 오류가 발생했습니다.",
@@ -37,23 +43,22 @@ const getLogin = (req, res) => {
 }
 
 // 로그인 처리 함수
-const loginUser = asyncHandler(async(req, res)=>{
+const loginUser = asyncHandler(async(req, res)=> {
     const {id, password} = req.body;
 
     const user = await User.findOne({id});
-    if (!user){
+    if (!user) {
         return res.json({message: "존재하지 않는 아이디입니다"});
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch){
+    if (!isMatch) {
         return res.json({message: "비밀번호가 일치하지 않습니다"});
     }
 
     const token = jwt.sign({id: user._id}, jwtSecret);
     res.cookie("token", token, {httpOnly: true});
     res.redirect("/");
-
 });
 
 // 로그아웃 처리 함수

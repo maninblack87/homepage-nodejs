@@ -1,0 +1,59 @@
+/* 예약 페이지 */
+#reservation-form{
+    width:500px;
+    min-height:45vh;
+    padding: 100px 0px;
+}
+#reservation-form>h1{
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#reservation-form label{
+    display: inline-block;
+    width:100px;
+    height:50px;
+}
+#reservation-form input, #reservation-form select{
+    width:350px;
+    height:30px;
+}
+#reservation-form #submit{
+    width:500px;
+    height:70px;
+}
+#reservation-form #submit input{
+    width:400px;
+    height:40px;
+}
+
+/* 예약 현황 페이지 */
+#my-reservation{
+    min-height:45vh;
+    margin-top:100px;
+    margin-bottom:100px;
+}
+#my-reservation table{
+    width:600px;
+    border-collapse: collapse;
+}
+#my-reservation h1{
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+}
+#my-reservation th{
+    height:50px;
+    padding: 0 10px;
+    border: 1px solid #677;
+    background-color: #233;
+    color:white;
+}
+
+#my-reservation td{
+    height:50px;
+    padding: 0 10px;
+    border: 1px solid #233;
+    text-align: right;
+}

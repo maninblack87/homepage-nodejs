@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="/css/myClass.css">
     <link rel="stylesheet" href="/css/register.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/reservation.css">
 </head>
 <body>
 
     <header>
-        <div id="hd1" class="white-anchor">
+        <div id="hd1" class="white-font">
             <div id="container">
                 <% if (isAuthenticated) { %>
+                    <div id="welcome"><%= user.id %>님 환영합니다!</div>
                     <div id="logout"><a href="/logout">로그아웃</a></div>
                 <% } else { %>
                     <div id="register"><a href="/register">회원가입</a></div>
@@ -30,8 +32,8 @@
                 </div>
                 <div id="category">
                     <ul>
-                        <li><a href="/reservation">예약</a></li>
-                        <li><a href="/intro">소개</a></li>
+                        <li><a href="/reservation">예약하기</a></li>
+                        <li><a href="/my-reservation">예약현황</a></li>
                     </ul>
                 </div>
             </div>

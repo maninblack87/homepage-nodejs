@@ -20,13 +20,14 @@ app.use(express.static("./public"));
 // 라우터 미들웨어 등록
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-app.use(cookieParser()); // 쿠키 파싱 추가(??이게 정확이 뭘까)
+app.use(cookieParser());
 
 // 사용자 로그인시 인증 미들웨어 사용
 app.use(authenticationMidware);
 
 // 라우트 미들웨어 사용
-app.use("/", require("./routes/userRoutes"));
+app.use("/", require("./routes/userRoutes"));              
+app.use("/", require("./routes/reservationRoutes"));    
 
 // 기본 라우트 추가 
 app.get("/", asyncHandler(async(req, res) => {

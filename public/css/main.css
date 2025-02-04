@@ -1,18 +1,42 @@
 /* 메인 페이지 스타일 */
+
 /* 공통 */
 
 /* 슬라이드 이미지 */
 #slider{
     width: 100%;
-    height: 50vh; /* 브라우저 높이의 50% */
+    height: 60vh; /* 브라우저 높이의 50% */
     overflow: hidden;
 }
 #slider #slider-image{
     width:100%;
-    height:50vh;
+    height:60vh;
     background-image:url("/img/slider1.jpg");
     background-size: cover;  /* 이미지가 요소를 가득 채우도록 설정 */
     background-position: center;
     background-repeat: no-repeat;
     transition: background-image 1s ease-in-out;    /* ?? 정확히 어떤 속성이지 ?? */
+}
+
+/* 예약 컨텐츠 */
+#reservation{
+    width:100%;
+    min-height:100vh;
+}   
+#reservation-packages>ul> li{
+    width:400px;
+    height:300px;
+    padding:10px;
+    display: inline-block;
+    margin-bottom:50px;
+    border:1px solid #eee;
+}
+#reservation-packages>ul>li img{
+    width: 380px;
+    height:200px;
+    margin-bottom:10px;
+}
+#reservation-packages h2{ /* 예약 컨텐츠에서서 패키지 상품 이미지 하단에 게시된 패키지명 */
+    height:30px;
+    font-size: 20px;
 }
