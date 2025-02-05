@@ -59,11 +59,6 @@ const loginUser = asyncHandler(async(req, res)=> {
     const token = jwt.sign({id: user._id}, jwtSecret);
     res.cookie("token", token, {httpOnly: true});
 
-    // 관리자 로그인 처리
-    if (id === "admin") {
-        return res.redirect("/admin");  // 관리자 페이지로 리디렉션
-    }
-
     res.redirect("/");
 });
 
