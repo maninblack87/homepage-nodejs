@@ -1,5 +1,12 @@
 /* 헤더 */
 /* 헤더1 : 로그인, 로그아웃, 회원가입 */
+/* header{
+    background-color: aliceblue;
+    z-index: 1;
+    position: fixed;
+    width:100vw;
+    height: 150px;
+} */
 #hd1{
     background: #455;
     height: 50px;
@@ -41,6 +48,12 @@
     padding-top:10px;
     float:left;
 }
+
+
+/* 메인 */
+/* main{
+    position: fixed;
+} */
 
 
 /* 풋터 */

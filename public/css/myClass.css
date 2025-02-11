@@ -1,3 +1,13 @@
+/* ㅅ */
+/* 스크롤바 숨기기 */
+/* (Chrome, Safari) */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+/* (Firefox) */
+.hide-scrollbar { scrollbar-width: none; }
+/* (Edge, IE) */
+.hide-scrollbar {-ms-overflow-style: none; }
+
+/* ㅇ */
 /* 앵커 및 폰트 태그 - 흰색 */
 .white-font, .white-font a{
     color: white;
@@ -6,7 +16,8 @@
     color: #ddd;
 }
 
-/* 해당 요소 내 (모든) 컨텐츠 중앙정렬 클래스 */
+/* ㅋ */
+/* 컨텐츠 중앙정렬 클래스 */
 .content-centered{
     display: flex;  /* !? 클래스 사용시 다른 display속성과 충돌이 생길 수 있을 듯 !? */
     justify-content: center;
