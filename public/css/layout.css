@@ -1,12 +1,5 @@
 /* 헤더 */
 /* 헤더1 : 로그인, 로그아웃, 회원가입 */
-/* header{
-    background-color: aliceblue;
-    z-index: 1;
-    position: fixed;
-    width:100vw;
-    height: 150px;
-} */
 #hd1{
     background: #455;
     height: 50px;
@@ -28,6 +21,7 @@
 /* 헤더2 : 로고, 카테고리 */
 #hd2{
     height:100px;
+    background-color: #fffff0;
 }
 #hd2 #logo{
     width:150px;
@@ -49,12 +43,10 @@
     float:left;
 }
 
-
 /* 메인 */
-/* main{
-    position: fixed;
-} */
-
+main{
+    background-color: white;
+}
 
 /* 풋터 */
 /* 풋터1 : 로고 */

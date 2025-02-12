@@ -61,6 +61,7 @@
     display: inline-block;
     margin-bottom:50px;
     border:1px solid #eee;
+    background-color: white;
 }
 #reservation-packages>ul>li img{
     width: 380px;
