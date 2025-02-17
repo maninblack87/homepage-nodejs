@@ -25,41 +25,60 @@
     /* 트랜지션 */
     transition: background-image 0.5s ease-in-out;
 }
-#slider #slider-buttons {
+/* 슬라이더 : 슬라이더 버튼1 */
+#slider #slider-buttons1 {
     position:absolute;
     width:100%;
     height:100px;
     top:35%;
 }
-#slider #slider-buttons button {
+#slider #slider-buttons1 button {
     background-color: rgba(0, 0, 0, 0);
     border: none;
     cursor: pointer;
     opacity: 0.5;
 }
-#slider #slider-buttons #prev-btn{
+#slider #slider-buttons1 #prev-btn{
     float:left;
     padding-left:50px;
 }
-#slider #slider-buttons #next-btn{
+#slider #slider-buttons1 #next-btn{
     float:right;
     padding-right:50px;
 }
-#slider #slider-buttons button:hover {
+#slider #slider-buttons1 button:hover {
     opacity: 1.0;
+}
+/* 슬라이더 : 슬라이더 버튼2 */
+#slider #slider-buttons2{
+    position:absolute;
+    width:100%;
+    height:20px;
+    bottom:10%;
+    text-align: center;
+}
+#slider #slider-buttons2 button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    padding: 0px 15px;
+}
+#slider #slider-buttons2 button:hover {
+    opacity: 0.5;
 }
 
 /* 예약 컨텐츠 */
 #reservation{
-    width:100%;
-    min-height:60vh;
-}   
-#reservation-packages>ul> li{
-    width:400px;
-    height:300px;
-    padding:10px;
-    display: inline-block;
-    margin-bottom:50px;
+    width:100%; min-height:60vh;
+}
+#reservation #reservation-packages>ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center; 
+}
+#reservation #reservation-packages>ul> li{
+    width:400px; height:300px;
+    padding:10px; margin: 10px;
     border:1px solid #eee;
     background-color: white;
 }
@@ -70,5 +89,15 @@
 }
 #reservation-packages h2{ /* 예약 컨텐츠에서서 패키지 상품 이미지 하단에 게시된 패키지명 */
     height:30px;
-    font-size: 20px;
+    font-size: 1rem;
+}
+
+
+
+
+/* 브라우저 크기가 태블릿 세로모드(768px) 이하 일때*/
+@media screen and (max-width: 768px){
+    #slider{
+        display: none;
+    }
 }

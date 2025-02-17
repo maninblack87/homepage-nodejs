@@ -1,22 +1,5 @@
-#standard-background-img{
-    width:100%;
-    height:60vh;
-    background-image: url("/img/standard-package-page-main.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#breakfast-background-img{
-    width:100%;
-    height:60vh;
-    background-image: url("/img/breakfast-package-page-main.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#dinner-background-img{
+/* 배경이미지 */
+#package-background-img{
     width:100%;
     height:60vh;
     background-image: url("/img/dinner-package-page-main.jpg");
@@ -25,53 +8,74 @@
     background-repeat: no-repeat;
 }
 
+/* 본문 부분 */
 #package-area{
     width:100%;
     min-height: 60vh;
-    position: relative;
+}
+#package-area>#container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top:-10vh;
+}
+#package-area>#container>div{
+    height: 50vh; min-height:400px;
+    margin-bottom: 10vh;
+    padding: 2.5em;
+    border-radius: 5vmin;
+    /* 박스 그림자 */
+    box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.5);
 }
 
+/* 본문 - 패키지 설명 */
 #package-area #package-description{
     background-color: white;
-    color:#775f97;  
-    width:59vw;
-    height:50vh;
-    padding:40px;
-    border-radius: 50px;
-    /* 포지션 */
-    position:absolute;
-    top: -5vw;
-    left: 5vw;
-    /* 박스 그림자 */
-    box-shadow:5px 5px 50px rgba(0, 0, 0, 0.5);
+    color: #775f97;  
+    width: 60vw;
 }
 #package-area #package-description h1{
     text-align: center;
-    margin-bottom:25px;
-    font-size:32px;
+    font-size:2em;
+    margin-bottom: 1em;
 }
 #package-area #package-description p{
-    font-size:20px;
-    line-height:32px;
-    margin-bottom:10px;
+    margin-bottom:1em;
 }
 
+/* 본문 - 패키지 정보 */
 #package-area #package-info{
     background-color: #775f97;
-    width:28vw;
-    height:50vh;
-    padding:40px;
-    border-radius: 50px;
-    /* 포지션 */
-    position: absolute;
-    top:-5vw;
-    right:5vw;
-    /* 박스 그림자 */
-    box-shadow:5px 5px 50px rgba(0, 0, 0, 0.5);
+    width: 28vw;
 }
 #package-area #package-info div{
-    margin-bottom:35px;
+    margin-bottom:2em;
 }
 #package-area #package-info h2{
-    margin-bottom:5px;
+    font-size:1.5em;
+    margin-bottom: 0.5em;
+}
+
+
+
+/* 브라우저 크기가 노트북 이하(1024px)일 때 */
+@media screen and (max-width:1024px){
+    #package-area>#container{
+        flex-wrap: wrap;
+    }
+    #package-area>#container>div{
+        width:90vw;
+        margin-bottom:5vh;
+    }
+    #package-area #package-description{
+        margin-top: 5vh;
+    }
+}
+
+
+/* 브라우저 크기가 태블릿 세로모드(768px) 이하 일때*/
+@media screen and (max-width: 768px){
+    #package-background-img{
+        height:40vh;
+    }
 }

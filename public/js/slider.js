@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 이미지를 변경하는 함수
     function changeBackgroundImage() {
-        currentIndex = (currentIndex + 1) % images.length; // 자동으로 다음 이미지로 변경
+        currentIndex = (currentIndex + 1) % images.length; // 0 -> 1 -> 2 -> ... -> (images.length) - 1 -> 0 -> 1 -> ... 이렇게 반복된다
         sliderImage.style.backgroundImage = `url(${images[currentIndex]})`;
     }
 

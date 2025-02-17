@@ -1,13 +1,17 @@
 *{
     box-sizing: border-box;
-    margin: 0px auto;
-    padding: 0px auto;
+    margin: 0px;
+    padding: 0px;
     list-style:none;
+}
+body{
+    font-size:0.8rem;
+    line-height:1.5em;
 }
 a{
     text-decoration: none;
     color:#233;
-    font-weight: 600;
+    font-weight: bold;
 }
 a:hover{
     color:#455;
@@ -15,4 +19,3 @@ a:hover{
 input{
     cursor:pointer;
 }
-

@@ -1,6 +1,6 @@
 /* 컨테이너 */
 #container{
-    width:80%;
+    width:90%;
     margin: 0 auto;
 }
 
@@ -36,5 +36,13 @@
     background: #fd4;
     border:1px solid gray;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1em;
+}
+
+
+
+
+
+@media screen and (min-width: 800px){
+
 }
