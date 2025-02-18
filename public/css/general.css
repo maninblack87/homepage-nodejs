@@ -4,23 +4,6 @@
     margin: 0 auto;
 }
 
-/* 팝업 */
-#go-top-btn{
-    position: fixed;
-    bottom:50px;
-    right:50px;
-    z-index: 10;
-    width:60px;
-    height:60px;
-    background-image: url("/img/Arrow-go-top-black.png");
-    background-size: contain; /* 배경 이미지가 요소 크기에 맞게 조절됨 */
-    background-repeat: no-repeat; /* 이미지 반복 제거 */
-    cursor:pointer;
-}
-#go-top-btn:hover{
-    opacity: 0.7;
-}
-
 /* 컨텐츠 */
 .content{
     padding-top:100px;

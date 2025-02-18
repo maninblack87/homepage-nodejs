@@ -1,5 +1,5 @@
 /* 헤더 */
-/* 헤더1 : 로그인, 로그아웃, 회원가입 */
+/* 헤더1 : 로그인, 로그아웃, 회원가입, (모바일 사용시)메뉴바 */
 #hd1 { 
     background: #455; 
     width:100%; height: 50px;
@@ -9,15 +9,38 @@
     display: flex;
     justify-content: flex-end;
 }
-
+/* 로그인, 로그아웃, 회원가입, 환영인사 */
 #hd1 #register, #hd1 #login, #hd1 #logout { 
     width: 100px; height: 50px;
 }
-
 #hd1 #welcome { 
     width:300px; height: 50px;
 }
-
+/* 헤더1: 메뉴바 */
+#hd1 #menu-bar{
+    width:50px;
+    height:50px;
+    position:absolute;
+    left:0px;
+    cursor: pointer;
+    /* 메뉴바 이미지 스타일 */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 35px;
+    /* 보통 모바일 사용중이 아니면 보이지 않음 */
+    display: none;
+}
+/* 헤더1: 모바일 사용시 카테고리 */
+#hd1 #mobile-category{
+    position:absolute;
+    top:50px; left:0px;
+    width: 100vw;
+    padding-left: 1em;
+    text-align: left;
+    background-color: #455;
+    /* 보통 모바일 사용중이 아니면 보이지 않음 */
+    display: none;
+}
 
 /* 헤더2 : 로고, 카테고리 */
 #hd2{
@@ -32,6 +55,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#hd2 #logo img{
+    width:100%;
+    height:100%;
 }
 #hd2 #category{
     width:80%;
@@ -79,8 +106,42 @@ footer #info{
 }
 
 
+/* 팝업 */
+#popup #go-top-btn{
+    position: fixed;
+    bottom:2vh;
+    right:5vw;
+    z-index: 10;
+    width:60px;
+    height:60px;
+    background-image: url("/img/Arrow-go-top-black.png");
+    background-size: contain; /* 배경 이미지가 요소 크기에 맞게 조절됨 */
+    background-repeat: no-repeat; /* 이미지 반복 제거 */
+    cursor:pointer;
+}
+#popup #go-top-btn:hover{
+    opacity: 0.7;
+}
 
 
 
-@media screen and (max-width: 800px){
+
+/* 브라우저 크기가 태블릿 세로모드(768px) 이하 일때*/
+@media screen and (max-width: 768px){
+    #hd1 #menu-bar{
+        display: flex;
+    }
+    #hd2{
+        background-color: white;
+        display: flex;
+    }
+    #hd2 #logo{
+        margin: 0 auto;
+    }
+    #hd2 #logo img{
+        width:120px;
+    }
+    #hd2 #category{
+        display: none;
+    }
 }

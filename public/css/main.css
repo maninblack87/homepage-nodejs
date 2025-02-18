@@ -100,4 +100,7 @@
     #slider{
         display: none;
     }
+    #reservation{
+        padding-top:50px;
+    }
 }

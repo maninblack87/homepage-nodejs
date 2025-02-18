@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/css/package.css">
     <!-- 스크립트 -->
     <script src="/js/goTop.js"></script>
+    <script src="/js/showMobileCategory.js"></script>
 </head>
 <body>
 
@@ -25,8 +26,22 @@
 
     <!-- 헤더 -->
     <header>
+
         <div id="hd1" class="white-font">
+
             <div id="container">
+
+                <!-- (모바일 사용시) 1.메뉴바 -->
+                <div id="menu-bar" style="background-image: url('/img/menu-bar-white-40x40.png');"></div>
+
+                <!-- (모바일 사용시) 2.카테고리 -->
+                <div id="mobile-category">
+                    <ul>
+                        <li><a href="/reservation">예약하기</a></li>
+                        <li><a href="/my-reservation">예약현황</a></li>
+                    </ul>
+                </div>
+
                 <% if (isAuthenticated) { %>
                     <div id="welcome"><%= user.id %>님 환영합니다!</div>
                     <div id="logout"><a href="/logout">로그아웃</a></div>
@@ -34,23 +49,32 @@
                     <div id="register"><a href="/register">회원가입</a></div>
                     <div id="login"><a href="/login">로그인</a></div>
                 <% } %>
+
             </div>
+
         </div>
+
         <div id="hd2">
+
             <div id="container">
+
                 <div id="logo">
                     <a href="/">
                         <img src="/img/logo.png" alt="로고">
                     </a>
                 </div>
+
                 <div id="category">
                     <ul>
                         <li><a href="/reservation">예약하기</a></li>
                         <li><a href="/my-reservation">예약현황</a></li>
                     </ul>
                 </div>
+
             </div>
+
         </div>
+        
     </header>
 
     <main class="hide-scrollbar">
