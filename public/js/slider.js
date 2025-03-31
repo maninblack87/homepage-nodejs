@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const sliderImage = document.getElementById("slider-image");
     const images = ["/img/slider1.jpg", "/img/slider2.jpg", "/img/slider3.jpg"]; // 변경할 이미지 목록
+    const dottedBtns = ["dotted-btn1", "dotted-btn2", "dotted-btn3"];
     let currentIndex = 0;
+
 
     // 이미지를 변경하는 함수
     function changeBackgroundImage() {
@@ -9,18 +11,25 @@ document.addEventListener("DOMContentLoaded", function () {
         sliderImage.style.backgroundImage = `url(${images[currentIndex]})`;
     }
 
-    // '이전' 버튼 클릭 시
-    document.getElementById("prev-btn").addEventListener("click", function () {
-        currentIndex = (currentIndex - 1 + images.length) % images.length; // 이전 이미지로 변경
+
+    // 버튼을 클릭하면 이미지를 변경하는 함수
+    // 첫번째 'O' 버튼 클릭 시
+    document.getElementById(dottedBtns[0]).addEventListener("click", function () {
+        currentIndex = 0; // 다음 이미지로 변경
+        sliderImage.style.backgroundImage = `url(${images[currentIndex]})`;
+    });
+    // 두번째 'O' 버튼 클릭 시
+    document.getElementById(dottedBtns[1]).addEventListener("click", function () {
+        currentIndex = 1; // 다음 이미지로 변경
+        sliderImage.style.backgroundImage = `url(${images[currentIndex]})`;
+    });
+    // 세번째 'O' 버튼 클릭 시
+    document.getElementById(dottedBtns[2]).addEventListener("click", function () {
+        currentIndex = 2; // 다음 이미지로 변경
         sliderImage.style.backgroundImage = `url(${images[currentIndex]})`;
     });
 
-    // '다음' 버튼 클릭 시
-    document.getElementById("next-btn").addEventListener("click", function () {
-        currentIndex = (currentIndex + 1) % images.length; // 다음 이미지로 변경
-        sliderImage.style.backgroundImage = `url(${images[currentIndex]})`;
-    });
-
+    
     // 자동으로 슬라이드 변경
     setInterval(changeBackgroundImage, 7000); // 7초마다 자동 변경
 
